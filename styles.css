@@ -56,15 +56,36 @@ body {
   height: 100vh;
   background-color: hsl(226, 43%, 10%);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+p {
+  color: hsl(235, 45%, 61%);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+h1 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+h2 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+}
+
 .container {
   display: flex;
-  width: 40vw;
+  width: 70vw;
   gap: 1rem;
   margin: 0 auto;
+  min-width: 660px;
+  max-width: 1000px;
   justify-content: center;
   align-items: center;
 }
@@ -74,10 +95,11 @@ section {
 }
 
 .main-card {
-  width: 25%;
+  width: 24%;
   background-color: hsl(235, 46%, 20%);
   border-radius: 12px;
   flex-direction: column;
+  height: 100%;
 }
 
 .self-info {
@@ -113,22 +135,42 @@ section {
 
 .cards {
   width: 75%;
+  height: 100%;
   flex-wrap: wrap;
-  /* flex: 1 ; */
+  justify-content: flex-start;
+  align-items: start;
+  gap: 1rem;
+  flex: 1;
 }
 
 .card {
-  width: 33%;
+  width: 30%;
   display: flex;
   flex-direction: column;
+  border-radius: 12px;
+  height: calc(51% - 1rem);
 }
 
 .images {
   display: flex;
+  height: 45px;
 }
 
-.work {
-  background-color: hsl(15, 100%, 70%);
+.images > img {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.images {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
 }
 
 .infos {
@@ -137,16 +179,64 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 1rem;
+  z-index: 1;
+  height: -webkit-fill-available;
+}
+
+.work {
+  background-color: hsl(15, 100%, 70%);
+}
+
+.play {
+  background-color: hsl(195, 74%, 62%);
+}
+
+.study {
+  background-color: hsl(348, 100%, 68%);
+}
+
+.exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+
+.social {
+  background-color: hsl(264, 64%, 52%);
+}
+
+.selfcare {
+  background-color: hsl(43, 84%, 65%);
 }
 
 /* ----- Mobile ----- */
 
-/* @media screen and (min-width: 400px) { 
-  .seciton {
-      flex-direction: column;
-      width: 100%;
+@media screen and (max-width: 500px) {
+  body {
+    height: auto;
   }
-  .pick-wave{
-      flex-direction: row;
+  .container {
+    flex-direction: column;
+    width: 100%;
+    min-width: 375px;
   }
-} */
+  .main-card {
+    width: 100%;
+  }
+  .pick-wave {
+    flex-direction: row;
+  }
+  .self-info {
+    width: 100%;
+  }
+  section {
+    width: 100%;
+  }
+  .cards {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+  }
+}
