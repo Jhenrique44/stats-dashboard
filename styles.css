@@ -184,27 +184,27 @@ section {
   height: -webkit-fill-available;
 }
 
-.work {
+#work {
   background-color: hsl(15, 100%, 70%);
 }
 
-.play {
+#play {
   background-color: hsl(195, 74%, 62%);
 }
 
-.study {
+#study {
   background-color: hsl(348, 100%, 68%);
 }
 
-.exercise {
+#exercise {
   background-color: hsl(145, 58%, 55%);
 }
 
-.social {
+#social {
   background-color: hsl(264, 64%, 52%);
 }
 
-.selfcare {
+#selfcare {
   background-color: hsl(43, 84%, 65%);
 }
 

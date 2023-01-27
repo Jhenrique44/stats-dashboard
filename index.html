@@ -18,8 +18,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="script" href="./script.js" />
-    <link rel="manifest" href="data.json" />
     <title>Frontend Mentor | Time tracking dashboard</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -32,9 +30,10 @@
         color: hsl(228, 45%, 44%);
       }
     </style>
+    <script type="text/javascript" src="./script.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div id="mydata" class="container">
       <section class="main-card">
         <div class="self-info">
           <div class="icon-profile">
@@ -46,102 +45,102 @@
           </div>
         </div>
         <div class="pick-wave">
-          <p>Daily</p>
-          <p>Weekly</p>
-          <p>Monthly</p>
+          <button onclick="changeParams('daily')" >Daily</button>
+          <button onclick="changeParams('weekly')" >Weekly</button>
+          <button onclick="changeParams('monthly')" >Monthly</button>
         </div>
       </section>
-      <section class="cards">
-        <div class="card work">
+      <section id="cards" class="cards">
+        <!-- <div id="card" class="card work">
           <div class="images">
             <img src="./images/icon-work.svg" alt="work-icon" />
           </div>
           <div class="infos">
             <div class="title">
-              <h2>Work</h2>
+              <h2 id="card-name"></h2>
               ...
             </div>
             <div class="time">
-              <h1>32hrs</h1>
-              <p>Last Week - 36hrs</p>
+              <h1 id="card-time-current"></h1>
+              <p id="card-time-previous"></p>
             </div>
           </div>
         </div>
-        <div class="card play">
+        <div id="card" class="card play">
           <div class="images">
             <img src="./images/icon-play.svg" alt="play-icon" />
           </div>
           <div class="infos">
             <div class="title">
-              <h2>Play</h2>
+              <h2 id="card-name"></h2>
               ...
             </div>
             <div class="time">
-              <h1>32hrs</h1>
-              <p>Last Week - 36hrs</p>
+              <h1 id="card-time-current"></h1>
+              <p id="card-time-previous"></p>
             </div>
           </div>
         </div>
-        <div class="card study">
+        <div id="card" class="card study">
           <div class="images">
             <img src="./images/icon-study.svg" alt="study-icon" />
           </div>
           <div class="infos">
             <div class="title">
-              <h2>Study</h2>
+              <h2 id="card-name">Study</h2>
               ...
             </div>
             <div class="time">
-              <h1>32hrs</h1>
-              <p>Last Week - 36hrs</p>
+              <h1 id="card-time-current">32hrs</h1>
+              <p id="card-time-previous">Last Week - 36hrs</p>
             </div>
           </div>
         </div>
-        <div class="card exercise">
+        <div id="card" class="card exercise">
           <div class="images">
             <img src="./images/icon-exercise.svg" alt="exercise-icon" />
           </div>
           <div class="infos">
             <div class="title">
-              <h2>Exercise</h2>
+              <h2 id="card-name">Exercise</h2>
               ...
             </div>
             <div class="time">
-              <h1>32hrs</h1>
-              <p>Last Week - 36hrs</p>
+              <h1 id="card-time-current">32hrs</h1>
+              <p id="card-time-previous">Last Week - 36hrs</p>
             </div>
           </div>
         </div>
-        <div class="card social">
+        <div id="card" class="card social">
           <div class="images">
             <img src="./images/icon-social.svg" alt="social-icon" />
           </div>
           <div class="infos">
             <div class="title">
-              <h2>Social</h2>
+              <h2 id="card-name">Social</h2>
               ...
             </div>
             <div class="time">
-              <h1>32hrs</h1>
-              <p>Last Week - 36hrs</p>
+              <h1 id="card-time-current">32hrs</h1>
+              <p id="card-time-previous">Last Week - 36hrs</p>
             </div>
           </div>
         </div>
-        <div class="card selfcare">
+        <div id="card" class="card selfcare">
           <div class="images">
             <img src="./images/icon-self-care.svg" alt="self-care-icon" />
           </div>
           <div class="infos">
             <div class="title">
-              <h2>Self Care</h2>
+              <h2 id="card-name">Self Care</h2>
               ...
             </div>
             <div class="time">
-              <h1>32hrs</h1>
-              <p>Last Week - 36hrs</p>
+              <h1 id="card-time-current">32hrs</h1>
+              <p id="card-time-previous">Last Week - 36hrs</p>
             </div>
           </div>
-        </div>
+        </div> -->
       </section>
     </div>
 
